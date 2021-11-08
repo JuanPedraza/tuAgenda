@@ -1,6 +1,7 @@
 const express = require("express")
 const mongoose = require("mongoose")
 const routesDoctor = require("./src/routes/doctor")
+require("dotenv").config()
 
 
 const app = express()
@@ -17,7 +18,7 @@ app.get("/", (req,res)=>{
 })
 
 // Conexión MongoDB
-const uriConection = "mongodb+srv://adminTest:Test2021@cluster0.ucrum.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+const uriConection = process.env.MONGODB_URI
 
 main().catch(err => console.log(err))
 async function main(){

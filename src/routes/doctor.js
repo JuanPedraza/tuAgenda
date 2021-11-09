@@ -52,7 +52,4 @@ router.delete("/doctor/:id", (req,res)=>
 
 
 
-
-
-
 module.exports = router

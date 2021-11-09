@@ -1,5 +1,6 @@
 const express = require("express")
 const routesDoctor = require("./routes/doctor")
+const routesPaciente = require("./routes/paciente")
 require("dotenv").config()
 
 require("../src/database")
@@ -11,6 +12,7 @@ const port = 3000
 // Middleware
 app.use(express.json())
 app.use('/api',routesDoctor)
+app.use('/api', routesPaciente)
 
 
 // Rutas
